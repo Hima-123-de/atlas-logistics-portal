@@ -69,11 +69,11 @@
   }
   
   .footer {
-    @apply bg-primary text-white;
+    @apply bg-primary text-white dark:bg-gray-900;
   }
   
   .article-text {
-    @apply text-gray-700 leading-relaxed;
+    @apply text-gray-700 dark:text-gray-300 leading-relaxed;
   }
   
   .btn-primary {

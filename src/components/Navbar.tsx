@@ -2,20 +2,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { useTheme } from '@/components/ThemeProvider';
+import { Sun, Moon } from 'lucide-react';
+import { Toggle } from '@/components/ui/toggle';
 
 const Navbar = () => {
+  const { theme, setTheme } = useTheme();
+  
   return (
-    <nav className="bg-primary">
+    <nav className="bg-primary dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-3">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/public/lovable-uploads/d78baa13-c958-4a90-afb0-e30e3888179a.png" 
+                src="/lovable-uploads/d78baa13-c958-4a90-afb0-e30e3888179a.png" 
                 alt="Atlas Global Logistics Inc Logo" 
                 className="h-10 w-auto"
               />
-              <span className="ml-2 text-white font-bold text-xl hidden md:block">Atlas Global Logistics Inc</span>
+              <span className="ml-2 text-white font-bold text-xl hidden sm:block">Atlas Global Logistics Inc</span>
             </Link>
           </div>
           
@@ -24,6 +29,9 @@ const Navbar = () => {
             <Link to="/about" className="nav-link">About</Link>
             <Link to="/services" className="nav-link">Services</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
+            <Toggle onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="ml-2 bg-transparent border-0">
+              {theme === 'dark' ? <Sun className="h-5 w-5 text-white" /> : <Moon className="h-5 w-5 text-white" />}
+            </Toggle>
           </div>
           
           <div>

@@ -27,9 +27,9 @@ const RecentPosts = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-12">
+    <section className="bg-gray-50 dark:bg-gray-800 py-12">
       <div className="section-container">
-        <h2 className="text-3xl font-bold mb-8 text-center">Recent Posts</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center dark:text-white">Recent Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
             <BlogCard key={index} {...post} />
@@ -37,7 +37,7 @@ const RecentPosts = () => {
         </div>
         <div className="mt-10 text-center">
           <Link to="/blog">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-gray-900">
               View All Posts
             </Button>
           </Link>
