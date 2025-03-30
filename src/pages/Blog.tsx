@@ -8,7 +8,7 @@ import BlogCard from '@/components/BlogCard';
 const Blog = () => {
   const blogPosts = [
     {
-      image: 'https://images.unsplash.com/photo-1586528116493-a029161edd50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
       title: '5 Ways to Improve Your Carrier Relationships',
       excerpt: 'Build stronger partnerships with carriers to ensure capacity and competitive rates.',
       slug: 'improve-carrier-relationships'
